@@ -210,7 +210,7 @@ if (isMobileDevice()) {
         <p class="error-message"><?php echo $error_message; ?></p>
         <?php } ?>
 
-            <form method="POST" action="login.php">
+            <form method="POST" action="index.php">
                 <div class="form-group">
                     <label for="username">Usuário</label>
                     <input type="text" id="username" name="username" required>
@@ -356,7 +356,7 @@ if (isMobileDevice()) {
         <p class="error-message"><?php echo $error_message; ?></p>
         <?php } ?>
 
-            <form method="POST" action="login.php">
+            <form method="POST" action="index.php">
                 <div class="form-group">
                     <label for="username">Usuário</label>
                     <input type="text" id="username" name="username" required>
