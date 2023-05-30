@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 
     // Conexão com o banco de dados
-    $conn = mysqli_connect("localhost:3306", "root", "", "login");
+    $conn = mysqli_connect("localhost", "root", "124679N@ruto", "login");
 
     $sql_code = "SELECT * FROM usuarios WHERE username = '$username' AND password = '$password'";
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->$error);
