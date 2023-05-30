@@ -48,7 +48,7 @@ $username['username'] = $_SESSION['username'];
             <li class="nav-item">
                 <!-- Imagem do perfil do usuário -->
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#profileModal">
-                    <img src="profile/<?php echo $user_pic; ?>.png" alt="Imagem do perfil do usuário" class="perfil-image rounded-circle profile-modal-image">
+                    <img src="Profile/<?php echo $user_pic; ?>.png" alt="Imagem do perfil do usuário" class="perfil-image rounded-circle profile-modal-image">
                 </a>
             </li>
             <li class="nav-item">
