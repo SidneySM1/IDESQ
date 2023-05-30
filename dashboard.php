@@ -97,7 +97,7 @@ $username['username'] = $_SESSION['username'];
             <div class="modal-body">
                 <!-- Conteúdo do modal -->
                 <div class="text-center">
-                    <img src="profile/<?php echo $user_pic; ?>.png" alt="Imagem do perfil do usuário" class="profile-modal-image rounded-circle">
+                    <img src="Profile/<?php echo $user_pic; ?>.png" alt="Imagem do perfil do usuário" class="profile-modal-image rounded-circle">
                 </div>
                 <div class="social-media">
                     <!-- Redes sociais do usuário -->
