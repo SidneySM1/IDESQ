@@ -9,7 +9,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
     // Conexão com o banco de dados
-    $conn = mysqli_connect("localhost", "root", "", "login2");
+    $conn = mysqli_connect("localhost", "root", "124679N@ruto", "login2");
 
     // Verificação da conexão com o banco de dados
     if (!$conn) {
