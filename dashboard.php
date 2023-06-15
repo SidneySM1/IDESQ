@@ -227,7 +227,7 @@ if (!empty($bio)) {
                         <div class="col-md-4">
                             <div class="card " style="margin-top: 20px;" onclick="redirectToMateriais()">
                                 <div class="card-header">
-                                    <img src="img/livros.png" alt="Imagem do card de materiais"
+                                    <img src="IMG/livros.png" alt="Imagem do card de materiais"
                                         class="img-fluid">
                                     Materiais
                                 </div>
@@ -244,7 +244,7 @@ if (!empty($bio)) {
                         <div class="col-md-4">
                             <div class="card" style="margin-top: 20px;">
                                 <div class="card-header">
-                                    <img src="img/calendario.png" alt="Imagem do card de presença"
+                                    <img src="IMG/calendario.png" alt="Imagem do card de presença"
                                         class="img-fluid">
                                     Presença
                                 </div>
@@ -261,7 +261,7 @@ if (!empty($bio)) {
                         <div class="col-md-4">
                             <div class="card " style="margin-top: 20px;" onclick="redirectToAtividade()">
                                 <div class="card-header">
-                                    <img src="img/atividade.png" alt="Imagem do card de atividades"
+                                    <img src="IMG/atividade.png" alt="Imagem do card de atividades"
                                         class="img-fluid">
                                     Atividades
                                 </div>
@@ -278,7 +278,7 @@ if (!empty($bio)) {
                             <div class="col-md-4">
                             <div class="card" style="margin-top: 20px;">
                                 <div class="card-header">
-                                    <img src="img/certificado.png"
+                                    <img src="IMG/certificado.png"
                                         alt="Imagem do card de atividades" class="img-fluid">
                                     Certificado/declaração
                                 </div>
@@ -293,7 +293,7 @@ if (!empty($bio)) {
                                                     <div class="col-md-4">
                             <div class="card" style="margin-top: 20px;" onclick="redirectToAula()">
                                 <div class="card-header">
-                                    <img src="img/aula.png"
+                                    <img src="IMG/aula.png"
                                         alt="Imagem do card de aula" class="img-fluid">
                                     Video aula
                                 </div>
