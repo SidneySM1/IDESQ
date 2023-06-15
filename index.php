@@ -4,23 +4,14 @@ include('conexao.php');
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-
-
-
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    // Filtro de entrada de dados para evitar SQL injection
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
-
     // Conexão com o banco de dados
-    $conn = mysqli_connect("localhost", "root", "124679N@ruto", "login");
+    $conn = mysqli_connect("localhost", "root", "", "login2");
 
-    $sql_code = "SELECT * FROM usuarios WHERE username = '$username' AND password = '$password'";
-    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->$error);
-
-
-    // Verificação da conexão com o banco de s
+    // Verificação da conexão com o banco de dados
     if (!$conn) {
         die("Erro ao conectar com o banco de dados: " . mysqli_connect_error());
     }
@@ -34,29 +25,29 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     // Verificação das credenciais do usuário
     if (mysqli_num_rows($result) == 1) {
-
-        
-        $usuario = $sql_query->fetch_assoc();
-
-        if(!isset($_SESSION)) {
-            session_start();
+        $usuario = mysqli_fetch_assoc($result);
+        if ($usuario['status'] == 'ativo') {
+            // O usuário está ativo, pode realizar o login
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['username'] = $usuario['username'];
+            $_SESSION['name'] = $usuario['name'];
+            $_SESSION['user_pic'] = $usuario['user_pic'];
+            $_SESSION['user_type'] = $usuario['user_type'];
+            $_SESSION['turma'] = $usuario['turma'];
+            $_SESSION['bio'] = $usuario['bio'];
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            // O usuário está inativo, exiba uma mensagem de erro ou redirecione para uma página de erro
+            $error_message = "Usuário inativo. Entre em contato com o administrador.";
         }
-
-        $_SESSION['id'] = $usuario['id'];
-        $_SESSION['username'] = $usuario['username'];
-        $_SESSION['name'] = $usuario['name'];
-        $_SESSION['user_pic'] = $usuario['user_pic'];
-        $_SESSION['user_type'] = $usuario['user_type'];
-        $_SESSION['turma'] = $usuario['turma'];
-
-        header("Location: dashboard.php");
     } else {
-        //echo "Usuário ou senha inválidos.";
-        //header("Location: login-invalid.html");
+        // Usuário ou senha inválidos
         $error_message = "Usuário ou senha inválidos.";
-        
     }
-    
 }
 
 

@@ -147,57 +147,49 @@ if (!empty($bio)) {
 
     <div class="container-fluid">
         <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-    <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-            <a class="navbar-brand" href="dashboard.php"><img src="logo.png" alt="Logo" class="navbar-logo"></a>
-            <li class="nav-item">
-                <a class="nav-link active" href="dashboard.php">
-                    <span class="fas fa-home"></span>
-                    Dashboard <span class="sr-only">(atual)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span class="fas fa-file"></span>
-                    Relatórios
-                </a>
-            </li>
-            <?php if ($user_type === 'admin' || $user_type === 'gestor'): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="usuarios.php">
-                        <span class="fas fa-users"></span>
-                        Usuários
-                    </a>
-                </li>
-            <?php endif; ?>
-            <?php if ($user_type === 'admin' || $user_type === 'professor'|| $user_type === 'gestor'): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="alunos.php">
-                    <span class="fas fa-graduation-cap"></span>
-                        Alunos
-                    </a>
-                </li>
-            <?php endif; ?>
-            <?php if ($user_type === 'admin' || $user_type === 'gestor'|| $user_type === 'professor'): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="turmas.php">
-                    <span class="fas fa-chalkboard-teacher"></span>
-                        Turmas
-                    </a>
-                </li>
-            <?php endif; ?>
-            <?php if ($user_type === 'admin' || $user_type === 'professor'|| $user_type === 'gestor'): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="alunos.php">
-                    <span class="fas fa-graduation-cap"></span>
-                        Cursos
-                    </a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </div>
-</nav>
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <a class="navbar-brand" href="dashboard.php"><img src="logo.png" alt="Logo" class="navbar-logo"></a>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.php">
+                                <span data-feather="home"></span>
+                                Dashboard <span class="sr-only">(atual)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Relatórios
+                            </a>
+                        </li>
+                        <?php if ($user_type === 'admin' || $user_type === 'gestor'): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="usuarios.php">
+                                    <span data-feather="users"></span>
+                                    Usuários
+                                </a>
+                            </li>
+                            <?php endif; ?>
+                            <?php if ($user_type === 'admin' || $user_type === 'professor'|| $user_type === 'gestor'): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alunos.php">
+                                    <span data-feather="users"></span>
+                                    Alunos
+                                </a>
+                            </li>
+                            <?php endif; ?>
+                            <?php if ($user_type === 'admin' || $user_type === 'gestor'|| $user_type === 'professor'): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="turmas.php">
+                                    <span data-feather="users"></span>
+                                    Turmas
+                                </a>
+                            </li>
+                            <?php endif; ?>
+                    </ul>
+                </div>
+            </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="my-custom-class">
@@ -359,8 +351,6 @@ if (!empty($bio)) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
-
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
@@ -377,17 +367,5 @@ if (!empty($bio)) {
 
 </script>
 
-
-
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
 </body>
 </html>
