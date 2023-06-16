@@ -1,5 +1,5 @@
 <?php
-    include_once('conexao.php');
+    include('conexao.php');
     include('protect.php');
 
     // Verifique se o usuário está logado
