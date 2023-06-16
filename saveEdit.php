@@ -36,12 +36,12 @@ if (isset($_POST['update'])) {
     }
 
     // Atualiza os dados do usuário no banco de dados
-    $sqlUpdate = "UPDATE usuarios SET name='$name', password='$senha', username='$username', email='$email', telefone='$telefone', genero='$sexo', data_nascimento='$data_nasc', cidade='$cidade', estado='$estado', bio='$bio2' WHERE id=$id";
+    $sqlUpdate = "UPDATE usuarios SET password='$senha', email='$email', telefone='$telefone', genero='$sexo', data_nascimento='$data_nasc', cidade='$cidade', estado='$estado', bio='$bio2' WHERE id=$id";
     $result = $mysqli->query($sqlUpdate);
 
     if ($result) {
         // Redireciona de volta para a página de sistema.php após a atualização
-        header('Location: usuarios.php');
+        header('Location: logout.php');
     } else {
         echo "Ocorreu um erro ao atualizar os dados do usuário.";
     }
